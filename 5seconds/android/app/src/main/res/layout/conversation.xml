@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/floatingCharacter"
+            android:visibility="gone"
+            android:layout_weight="2"
+            android:scaleType="fitStart"
+            android:src="@drawable/ariel"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/sayingLayout"
+        android:visibility="gone"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="캐릭터 이름"
+            android:padding="5dp"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:background="@drawable/conv_shape"
+            />
+        <TextView
+            android:id="@+id/conv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/name"
+            android:text="text"
+            android:background="@drawable/conv_shape"
+            android:padding="15dp"
+            android:textSize="30dp"
+            android:textColor="#000000"/>
+        <Button
+            android:id="@+id/conv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00cfcf"
+            android:visibility="gone"
+            android:text="확인"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6efee"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:background="#f6efee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:layout_gravity="center"
+        android:text="Noodle Library"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center" />
+
+
+    <ListView
+        android:background="#fcfcfc"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:id="@+id/list"
+        android:layout_weight="150"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center" />
+
+
+    <ImageButton
+        android:src="@drawable/playnoodle"
+        android:background="#f6effe"
+        android:layout_width="wrap_content"
+        android:layout_height="0sp"
+        android:padding="0sp"
+        android:layout_marginHorizontal="20sp"
+        android:scaleType="fitCenter"
+        android:id="@+id/LibraryPlay"
+        android:layout_gravity="center"
+        android:onClick = "LibraryPlay"
+        android:visibility="invisible"
+        android:layout_weight="30"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_gravity="center" />
+
+
+</LinearLayout>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RhythmNoodleActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:minWidth="100sp"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:maxLength="10"
+        android:layout_marginTop="10sp"
+        android:hint="국수이름"
+        android:id="@+id/noodleName"
+        android:layout_weight="15" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0sp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="20"
+        >
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:layout_gravity="bottom" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:src="@drawable/eggslice1"
+            android:layout_width="0sp"
+            android:layout_height="30sp"
+            android:layout_weight="10"
+            android:layout_gravity="bottom"
+            android:maxWidth="10sp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0sp"
+            android:layout_height="60sp"
+            android:layout_gravity="bottom"
+            android:layout_weight="15"
+            android:src="@drawable/noodle1" />
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="bottom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0sp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="30"
+        >
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="bottom" />
+
+        <ImageButton
+            android:background="@drawable/musicplayer"
+            android:layout_width="0sp"
+            android:layout_height="60sp"
+            android:id="@+id/play"
+            android:onClick="onClick"
+            android:layout_weight="10"
+            />
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="bottom" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:src="@drawable/bowlslice1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0sp"
+            android:layout_weight="30"/>
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="bottom" />
+        <Button
+            android:background="#ffffa0"
+            android:text="레시피\n저장"
+            android:layout_width="0sp"
+            android:layout_height="65sp"
+            android:padding="0sp"
+            android:id="@+id/save"
+            android:layout_marginRight="3sp"
+            android:onClick="onClick"
+            android:layout_weight="10"
+            />
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="bottom" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="30"
+        >
+
+
+        <ImageButton
+            android:background="@drawable/wood1"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/wood1"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/wood22"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/wood2"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/wood3"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/wood3"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/wood4"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/wood4"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+
+
+
+    </GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="5sp"
+        android:layout_marginHorizontal="15sp"
+        android:layout_weight="30">
+
+        <ImageButton
+            android:background="@drawable/bowl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/bowl1"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/bowl2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/bowl2"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/bowl3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/bowl3"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/bowl4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/bowl4"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:background="@drawable/stick"
+        android:layout_width="400sp"
+        android:layout_height="0px"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_marginRight="3sp"
+        android:textSize="40sp"
+        android:onClick="onClick"
+        android:layout_weight="3"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="5sp"
+        android:layout_marginHorizontal="15sp"
+        android:layout_weight="30">
+
+        <ImageButton
+            android:background="@drawable/egg1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/egg1"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/egg2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/egg2"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/egg3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/egg3"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+        <ImageButton
+            android:background="@drawable/egg4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/egg4"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="30"
+            />
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:background="@drawable/stick"
+        android:layout_width="400sp"
+        android:layout_height="0px"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_marginRight="3sp"
+        android:textSize="40sp"
+        android:onClick="onClick"
+        android:layout_weight="3"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="5sp"
+        android:layout_marginHorizontal="15sp"
+        android:layout_weight="30">
+
+        <ImageButton
+            android:background="@drawable/noodle1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/noodle1"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="10"
+            />
+        <ImageButton
+            android:background="@drawable/noodle2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/noodle2"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="10"
+            />
+        <ImageButton
+            android:background="@drawable/noodle3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/noodle3"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="10"
+            />
+        <ImageButton
+            android:background="@drawable/noodle4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/noodle4"
+            android:layout_gravity="center"
+            android:layout_marginRight="3sp"
+            android:textSize="40sp"
+            android:onClick="onClick"
+            android:layout_weight="10"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:layout_gravity="bottom" />
+
+
+</LinearLayout>
