@@ -11,3 +11,6 @@
 
 #### 4. 관련 링크
     [5초 준다! 설명 영상](https://www.youtube.com/watch?v=ijXDHcSgn2g, "go Youtube")
+
+[Title](link)
+적용예: [Google](https://google.com, "google link")
