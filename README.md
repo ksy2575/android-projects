@@ -10,4 +10,4 @@
 #### 3. 관련 이미지
 
 #### 4. 관련 링크
-    https://www.youtube.com/watch?v=ijXDHcSgn2g
+    [5초 준다! 설명 영상](https://www.youtube.com/watch?v=ijXDHcSgn2g, "go Youtube")
