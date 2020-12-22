@@ -4,7 +4,7 @@
 
 기획
 
-![nonogram1](./images/nonogram1.png){: width="50px" height="50px"}
+![nonogram1](./images/nonogram1.png = 200x200){: width="50px" height="50px"}
 ![nonogram1](./images/nonogram2.png)
 ![nonogram1](./images/nonogram3.png)
 ![nonogram1](./images/nonogram4.png)
