@@ -3,9 +3,8 @@
 
 
 기획
-<img src="./images/nonogram1.png" width="200">
-![nonogram1](./images/nonogram1.png){:height="36px" width="36px"}.
-![nonogram1](./images/nonogram2.png)
-![nonogram1](./images/nonogram3.png)
-![nonogram1](./images/nonogram4.png)
-![nonogram1](./images/nonogram5.png)
+<img src="./images/nonogram1.png" width="300">
+<img src="./images/nonogram2.png" width="300">
+<img src="./images/nonogram3.png" width="300">
+<img src="./images/nonogram4.png" width="300">
+<img src="./images/nonogram5.png" width="300">
