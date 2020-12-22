@@ -4,8 +4,8 @@
 
 기획
 
-![nonogram1](./images/nonogram1)
-![nonogram1](./images/nonogram1)
-![nonogram1](./images/nonogram1)
-![nonogram1](./images/nonogram1)
-![nonogram1](./images/nonogram1)
+![nonogram1](./images/nonogram1.png)
+![nonogram1](./images/nonogram2.png)
+![nonogram1](./images/nonogram3.png)
+![nonogram1](./images/nonogram4.png)
+![nonogram1](./images/nonogram5.png)
