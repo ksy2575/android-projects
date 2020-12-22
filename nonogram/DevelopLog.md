@@ -3,7 +3,7 @@
 
 
 기획
-
+<img src="./images/nonogram1.png" width="200")
 ![nonogram1](./images/nonogram1.png){:height="36px" width="36px"}.
 ![nonogram1](./images/nonogram2.png)
 ![nonogram1](./images/nonogram3.png)
