@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "nonogram_201222"
