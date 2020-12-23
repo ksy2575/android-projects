@@ -33,7 +33,7 @@
 <img src="./images/nonogram3.png" width="300">
 
 #### 게임액티비티
-1. onTouchListner, onDragListner를 활용하여 화면상 터치 좌표를 배열로 바꾸는 코딩 필요
+1. onClickListner, onDragListner를 활용하여 화면상 터치 좌표를 배열로 바꾸는 코딩 필요
 2. 연필 모드 버튼
 3. 지우개 모드 버튼(터치 시 X자로 표시)
 4. 힌트 버튼 - 횟수에 제약을 두거나 Google Ad 시청 후 힌트 제공
@@ -61,4 +61,22 @@
 
 ### 기능 정리
 
-
+   + onClickListener를 통한 상호작용
+      * 액티비티 간 intent
+      * inflater 팝업 출력
+         - 환경설정
+         - 큰 그림
+         - 스테이지 클리어
+         - 삭제 팝업
+         - 종료 팝업
+      * 커스텀 리스트 뷰 작동
+      * 게임, 창작 중 색칠 기능
+      * 뷰 방식 변경 기능
+      * bgm 온/오프
+      * DB 접근 및 수정
+   + onDragListener를 통한 상호작용
+      * 게임, 창작 중 일괄 색칠 기능
+   + onLongClickListener를 통한 상호작용
+      * inflater 팝업 출력
+   + 커스텀 리스트 뷰
+      * 세로로 구성된 리스트 뷰의 개체를 클릭 시 그리드 뷰 출력
