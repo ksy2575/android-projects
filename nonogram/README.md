@@ -96,3 +96,6 @@
       * Google Play 로그인을 통한 업적 달성 기능
       * 고유 코드 또는 비트맵 이미지를 기반으로 한 창작마당 공유 기능(서버 개설 시)
       
+
+### DB 구조
+   <img src="./images/nonogram_DB.png" width="300">
