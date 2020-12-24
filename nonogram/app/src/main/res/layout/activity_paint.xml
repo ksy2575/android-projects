@@ -16,11 +16,35 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="5"/>
+            android:layout_weight="1"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/settingBtn"
+            android:id="@+id/penBtn"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eraserBtn"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorBtn"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewBtn"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuBtn"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -32,13 +56,13 @@
         android:layout_width="match_parent"
         android:layout_height="0sp"
         android:orientation="horizontal"
-        android:layout_weight="40">
+        android:layout_weight="50">
 
 
-        <ImageView
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background"
+            android:id="@+id/gameArea"
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -47,26 +71,8 @@
         android:layout_width="match_parent"
         android:layout_height="0sp"
         android:orientation="horizontal"
-        android:layout_weight="25">
+        android:layout_weight="15">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/startBtn"
-            android:layout_weight="10"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/albumBtn"
-            android:layout_weight="10"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
