@@ -98,4 +98,4 @@
       
 
 ### DB 구조
-   <img src="./images/nonogram_DB.png" width="300">
+   <img src="./images/nonogram_DB.png" width="600">
