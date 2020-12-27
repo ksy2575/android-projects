@@ -40,7 +40,7 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         title.setText(items.get(position).toString());
 
         //icon
-        ImageView icon = convertView.findViewById(R.id.icon_view);
+        ImageView icon = convertView.findViewById(R.id.icon_view1);
         Context context = icon.getContext();
         int id = context.getResources().getIdentifier("a" + position, "drawable",
                 context.getPackageName());
