@@ -16,67 +16,87 @@
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80sp"
                 android:id="@+id/title_view"
                 android:text="Stage. 1"
-                android:textSize="30sp"
+                android:textSize="45sp"
+                android:gravity="center_vertical"
                 android:src="@mipmap/ic_launcher"/>
 
+
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="160sp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0sp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="right"
-                    >
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_weight="1"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/icon_view1"
-                        android:src="@mipmap/ic_launcher"
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/icon_view2"
-                        android:src="@mipmap/ic_launcher"
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/icon_view3"
-                        android:src="@mipmap/ic_launcher"
-                        />
-                </LinearLayout>
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="right"
-                    >
+                    android:orientation="vertical"
+                    android:id="@+id/stageGrid"
+                    android:layout_weight="2">
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/icon_view4"
-                        android:src="@mipmap/ic_launcher"
-                        />
-                    <ImageView
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="80sp"
+                            android:id="@+id/icon_view1"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_weight="1"
+                            />
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="80sp"
+                            android:id="@+id/icon_view2"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_weight="1"
+                            />
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="80sp"
+                            android:id="@+id/icon_view3"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_weight="1"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/icon_view5"
-                        android:src="@mipmap/ic_launcher"
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/icon_view6"
-                        android:src="@mipmap/ic_launcher"
-                        />
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon_view4"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_weight="1"
+                            />
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon_view5"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_weight="1"
+                            />
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon_view6"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_weight="1"
+                            />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 

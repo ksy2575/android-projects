@@ -40,11 +40,79 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         title.setText(items.get(position).toString());
 
         //icon
-        ImageView icon = convertView.findViewById(R.id.icon_view1);
-        Context context = icon.getContext();
-        int id = context.getResources().getIdentifier("a" + position, "drawable",
-                context.getPackageName());
-        icon.setImageResource(id);
+        ImageView icon1 = convertView.findViewById(R.id.icon_view1);
+        ImageView icon2 = convertView.findViewById(R.id.icon_view2);
+        ImageView icon3 = convertView.findViewById(R.id.icon_view3);
+        ImageView icon4 = convertView.findViewById(R.id.icon_view4);
+        ImageView icon5 = convertView.findViewById(R.id.icon_view5);
+        ImageView icon6 = convertView.findViewById(R.id.icon_view6);
+
+        int id;
+        int i = 0;
+        Context context;
+
+        //st1_1 형식으로 저장된 사진 파일 불러오기
+        context = icon1.getContext();
+        if(true){
+            id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
+                    context.getPackageName());
+        }else{
+            id = context.getResources().getIdentifier("aaa", "drawable",
+                    context.getPackageName());
+        }
+        icon1.setImageResource(id);
+
+
+        context = icon2.getContext();
+        if(false){
+            id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
+                    context.getPackageName());
+        }else{
+            id = context.getResources().getIdentifier("aaa", "drawable",
+                    context.getPackageName());
+        }
+        icon2.setImageResource(id);
+
+        context = icon3.getContext();
+        if(true){
+            id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
+                    context.getPackageName());
+        }else{
+            id = context.getResources().getIdentifier("aaa", "drawable",
+                    context.getPackageName());
+        }
+        icon3.setImageResource(id);
+
+        context = icon4.getContext();
+        if(true){
+            id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
+                    context.getPackageName());
+        }else{
+            id = context.getResources().getIdentifier("aaa", "drawable",
+                    context.getPackageName());
+        }
+        icon4.setImageResource(id);
+
+        context = icon5.getContext();
+        if(true){
+            id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
+                    context.getPackageName());
+        }else{
+            id = context.getResources().getIdentifier("aaa", "drawable",
+                    context.getPackageName());
+        }
+        icon5.setImageResource(id);
+
+        context = icon6.getContext();
+        if(true){
+            id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
+                    context.getPackageName());
+        }else{
+            id = context.getResources().getIdentifier("aaa", "drawable",
+                    context.getPackageName());
+        }
+        icon6.setImageResource(id);
+
 
         return convertView;
     }

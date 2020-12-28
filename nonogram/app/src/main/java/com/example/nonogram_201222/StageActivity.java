@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.HashMap;
@@ -13,7 +14,7 @@ import java.util.HashMap;
 public class StageActivity extends AppCompatActivity {
 
     ImageButton intentBtn;
-
+    LinearLayout stageGrid;
     private HashMap<Integer, String> items = new HashMap<Integer, String>();
     private ListView listView;
 
@@ -23,11 +24,12 @@ public class StageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stage);
 
         intentBtn = findViewById(R.id.intentBtn);
+        stageGrid = findViewById(R.id.stageGrid);
 
         listView = findViewById(R.id.stageArea);
 
-        for(int i = 0;i<5;i++){
-            items.put(i, "item Number" + i);
+        for(int index = 0;index<5;index++){
+            items.put(index, "Stage " + (index+1) + ". 학교");
         }
         System.out.println(items.values());
 
