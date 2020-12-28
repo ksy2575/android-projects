@@ -27,7 +27,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="160sp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/stageGrid"
+                android:visibility="gone">
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
@@ -38,7 +40,6 @@
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:id="@+id/stageGrid"
                     android:layout_weight="2">
 
                     <LinearLayout

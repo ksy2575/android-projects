@@ -1,11 +1,13 @@
 package com.example.nonogram_201222;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -47,11 +49,12 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         ImageView icon5 = convertView.findViewById(R.id.icon_view5);
         ImageView icon6 = convertView.findViewById(R.id.icon_view6);
 
+
         int id;
         int i = 0;
         Context context;
 
-        //st1_1 형식으로 저장된 사진 파일 불러오기
+        //st1_1 형식으로 저장된 사진 파일 불러오기 - 나중에 DB와 연동
         context = icon1.getContext();
         if(true){
             id = context.getResources().getIdentifier("st" + position + "_" + i++, "drawable",
@@ -114,8 +117,38 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         icon6.setImageResource(id);
 
 
+        LinearLayout stageGrid = convertView.findViewById(R.id.stageGrid);
+
+        if(position == 0){
+            stageGrid.setVisibility(View.VISIBLE);
+        }
+
+
         return convertView;
     }
 
 
+    @NonNull
+    public View foldView(int position, @Nullable View convertView){
+//        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        convertView = inflater.inflate(R.layout.list_item_view, null, true);
+
+
+        Log.d("asdf", position + " foldView");
+        LinearLayout stageGrid = convertView.findViewById(R.id.stageGrid);
+
+        if(stageGrid.getVisibility() == View.GONE){
+            stageGrid.setVisibility(View.VISIBLE);
+            Log.d("asdf", position + " Gone");
+        }
+
+        return convertView;
+    }
+
+    public void folding(int i) {
+//            stageGrid.setVisibility(View.VISIBLE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        foldView(i, inflater.inflate(R.layout.list_item_view, null, true));
+
+    }
 }

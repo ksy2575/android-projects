@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -33,8 +35,25 @@ public class StageActivity extends AppCompatActivity {
         }
         System.out.println(items.values());
 
-        CustomAdapter adapter = new CustomAdapter(this, 0, items);
+        final CustomAdapter adapter = new CustomAdapter(this, 0, items);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Toast.makeText(getApplicationContext(), "asdf"+i, Toast.LENGTH_LONG).show();
+                //adapterView에 position 전달
+                adapter.folding(i);
+
+//                if(stageGrid.getVisibility() == View.GONE){
+//                    stageGrid.setVisibility(View.VISIBLE);
+//                }else{
+//                    stageGrid.setVisibility(View.GONE);
+//                }
+
+            }
+        });
 
         intentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
