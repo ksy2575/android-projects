@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -20,13 +21,14 @@ public class StageActivity extends AppCompatActivity {
     private HashMap<Integer, String> items = new HashMap<Integer, String>();
     private ListView listView;
 
+    int foldIndex = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stage);
 
         intentBtn = findViewById(R.id.intentBtn);
-        stageGrid = findViewById(R.id.stageGrid);
 
         listView = findViewById(R.id.stageArea);
 
@@ -42,10 +44,18 @@ public class StageActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                Log.d("asdf", i + " onClick");
                 Toast.makeText(getApplicationContext(), "asdf"+i, Toast.LENGTH_LONG).show();
                 //adapterView에 position 전달
-                adapter.folding(i);
+//                adapter.folding(i);
 
+//                if(foldIndex != -1){
+//                    stageGrid = (LinearLayout)listView.getChildAt(foldIndex).findViewById(R.id.stageGrid);
+//                    stageGrid.setVisibility(View.GONE);
+//                }
+//                stageGrid = (LinearLayout)listView.getChildAt(i).findViewById(R.id.stageGrid);
+//                stageGrid.setVisibility(View.VISIBLE);
+//                foldIndex = i;
 //                if(stageGrid.getVisibility() == View.GONE){
 //                    stageGrid.setVisibility(View.VISIBLE);
 //                }else{

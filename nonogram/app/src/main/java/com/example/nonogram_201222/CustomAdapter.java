@@ -117,38 +117,48 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         icon6.setImageResource(id);
 
 
-        LinearLayout stageGrid = convertView.findViewById(R.id.stageGrid);
+        final LinearLayout stageGrid = convertView.findViewById(R.id.stageGrid);
 
-        if(position == 0){
-            stageGrid.setVisibility(View.VISIBLE);
-        }
+        //201219 펼쳐지는 리스트뷰 구현 - 다른 리스트를 접는 기능은 고민 중
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(stageGrid.getVisibility() == View.GONE){
+                    stageGrid.setVisibility(View.VISIBLE);
+                }
+                else{
+                    stageGrid.setVisibility(View.GONE);
+                }
+            }
+        });
 
 
+        Log.d("asdf", position + " view");
         return convertView;
     }
 
 
-    @NonNull
-    public View foldView(int position, @Nullable View convertView){
-//        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        convertView = inflater.inflate(R.layout.list_item_view, null, true);
-
-
-        Log.d("asdf", position + " foldView");
-        LinearLayout stageGrid = convertView.findViewById(R.id.stageGrid);
-
-        if(stageGrid.getVisibility() == View.GONE){
-            stageGrid.setVisibility(View.VISIBLE);
-            Log.d("asdf", position + " Gone");
-        }
-
-        return convertView;
-    }
-
-    public void folding(int i) {
+//    @NonNull
+//    public View foldView(int position, @Nullable View convertView){
+////        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+////        convertView = inflater.inflate(R.layout.list_item_view, null, true);
+//
+//
+//        Log.d("asdf", position + " foldView");
+//        LinearLayout stageGrid = convertView.findViewById(R.id.stageGrid);
+//
+//        if(stageGrid.getVisibility() == View.GONE){
 //            stageGrid.setVisibility(View.VISIBLE);
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        foldView(i, inflater.inflate(R.layout.list_item_view, null, true));
+//            Log.d("asdf", position + " Gone");
+//        }
+//
+//        return convertView;
+//    }
 
-    }
+//    public void folding(int i) {
+////            stageGrid.setVisibility(View.VISIBLE);
+//        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        foldView(i, inflater.inflate(R.layout.list_item_view, null, true));
+//
+//    }
 }
