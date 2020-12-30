@@ -3,6 +3,7 @@ package com.example.nonogram_201222;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,23 +46,12 @@ public class StageActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Log.d("asdf", i + " onClick");
-                Toast.makeText(getApplicationContext(), "asdf"+i, Toast.LENGTH_LONG).show();
-                //adapterView에 position 전달
-//                adapter.folding(i);
+//                Toast.makeText(getApplicationContext(), "asdf"+i, Toast.LENGTH_LONG).show();
 
-//                if(foldIndex != -1){
-//                    stageGrid = (LinearLayout)listView.getChildAt(foldIndex).findViewById(R.id.stageGrid);
-//                    stageGrid.setVisibility(View.GONE);
-//                }
-//                stageGrid = (LinearLayout)listView.getChildAt(i).findViewById(R.id.stageGrid);
-//                stageGrid.setVisibility(View.VISIBLE);
-//                foldIndex = i;
-//                if(stageGrid.getVisibility() == View.GONE){
-//                    stageGrid.setVisibility(View.VISIBLE);
-//                }else{
-//                    stageGrid.setVisibility(View.GONE);
-//                }
+//                Cursor cursor = (Cursor)adapterView.getItemAtPosition(i);
+//                Log.d("asdf", cursor.getString(0));
 
+//                Log.d("asdf", "asdf" + String.valueOf(adapterView.getItemAtPosition(i)));
             }
         });
 
