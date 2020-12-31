@@ -51,7 +51,7 @@ public class StageActivity extends AppCompatActivity {
 //                Cursor cursor = (Cursor)adapterView.getItemAtPosition(i);
 //                Log.d("asdf", cursor.getString(0));
 
-//                Log.d("asdf", "asdf" + String.valueOf(adapterView.getItemAtPosition(i)));
+                Log.d("asdf", "asdf" + String.valueOf(adapterView.getItemAtPosition(i)));
             }
         });
 
