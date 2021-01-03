@@ -1,6 +1,7 @@
 package com.example.nonogram_201222;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -53,7 +54,7 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent){
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.list_item_view, null, true);
@@ -166,11 +167,53 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
 
                 }
             });
+            viewHolder.icon1.
+                    setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.d("asdf", "icon1 : " + position +  getItemId(position));
+                            if(true){
+                                StageActivity stageActivity = new StageActivity();
+                                stageActivity.goToGame(1, position);
+                            }
+                        }
+                    });
+            viewHolder.icon2.
+                    setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.d("asdf", "icon2 : " + position +  getItemId(position));
+                        }
+                    });
+            viewHolder.icon3.
+                    setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.d("asdf", "icon3 : " + position +  getItemId(position));
+                        }
+                    });
+            viewHolder.icon4.
+                    setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.d("asdf", "icon4");
+                        }
+                    });
+            viewHolder.icon5.
+                    setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.d("asdf", "icon5");
+                        }
+                    });
+            viewHolder.icon6.
+                    setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.d("asdf", "icon6");
+                        }
+                    });
         }
-
-
-
-//        Log.d("asdf", position + " view");
         return convertView;
     }
 

@@ -59,8 +59,17 @@ public class StageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StageActivity.this, GameActivity.class);
+                intent.putExtra("i", 1);
+                intent.putExtra("j", 1);
                 startActivity(intent);
             }
         });
+    }
+    void goToGame(int i, int j){
+        Log.d("asdf", "asdf");
+        Intent intent = new Intent(StageActivity.this, GameActivity.class);
+        intent.putExtra("i", i);
+        intent.putExtra("j", j);
+        startActivity(intent);
     }
 }
