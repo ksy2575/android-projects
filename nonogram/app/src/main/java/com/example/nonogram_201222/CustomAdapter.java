@@ -149,26 +149,33 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         viewHolder.stageGrid = convertView.findViewById(R.id.stageGrid);
 
         //201229 펼쳐지는 리스트뷰 구현 - 다른 리스트를 접는 기능은 고민 중
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(viewHolder.stageGrid.getVisibility() == View.GONE){
-                    viewHolder.stageGrid.setVisibility(View.VISIBLE);
+        final View finalConvertView = convertView;
+        if(!convertView.hasOnClickListeners()){
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    viewHolder = (ViewHolder) finalConvertView.getTag();
+                    if(viewHolder.stageGrid.getVisibility() == View.GONE){
+//                    viewHolder = (ViewHolder) finalConvertView.getTag();
+                        viewHolder.stageGrid.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        viewHolder.stageGrid.setVisibility(View.GONE);
+                    }
+                    Log.d("asdf", viewHolder.stageGrid+" view");
+
                 }
-                else{
-                    viewHolder.stageGrid.setVisibility(View.GONE);
-                }
-                Log.d("asdf", " view");
-            }
-        });
+            });
+        }
 
 
-        Log.d("asdf", position + " view");
+
+//        Log.d("asdf", position + " view");
         return convertView;
     }
 
 //    @Override
 //    protected void onCreate(@Nullable Bundle savedInstanceState){
-//
+//        super.onCreate(savedInstanceState);
 //    }
 }
