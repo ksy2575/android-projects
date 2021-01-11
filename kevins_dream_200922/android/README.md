@@ -1,8 +1,8 @@
 <img src="./images/kevinsdream1.png" width="300">
+<img src="./images/kevinsdream2.png" width="300">
 
 #### 인공지능을 활용한 아동용 영어교육 어플리케이션 - 케빈의 꿈
 
-<img src="./images/kevinsdream2.png" width="300">
 
    개발일정 : 2019.12.19 ~ 2020.09.22
    개발인원 : 2공1타 팀 - 김수용(팀장), 이예지, 주지영
