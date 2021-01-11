@@ -64,6 +64,12 @@
 메인 화면
 
 
+
+<img src="./images/kevinsdream7_2.png" width="500">
+
+튜토리얼
+
+
 <img src="./images/kevinsdream8.png" width="500">
 
 스테이지 선택
@@ -79,17 +85,18 @@
 물체인식부
 
 
-<img src="./images/kevinsdream11.png" width="500">
+<img src="./images/kevinsdream11.png" width="300"><img src="./images/kevinsdream11_2.png" width="300">
 
 듣고 말하기
 
 
-<img src="./images/kevinsdream12.png" width="500">
+<img src="./images/kevinsdream12.png" width="300"><img src="./images/kevinsdream12_2.png" width="300"><img src="./images/kevinsdream12_3.png" width="300">
 
 손글씨 인식부
 
 
-<img src="./images/kevinsdream13.png" width="500">
+<img src="./images/kevinsdream13.png" width="300"><img src="./images/kevinsdream13_2.png" width="300">
+<img src="./images/kevinsdream13_3.png" width="300"><img src="./images/kevinsdream13_4.png" width="300">
 
 엔딩
 
