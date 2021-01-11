@@ -48,3 +48,54 @@
 #### 개발 일정(2019.12.19 ~ 2020.09.22)
 
 <img src="./images/kevinsdream5.png" width="500">
+
+
+
+
+#### 앱 스크린샷
+
+<img src="./images/kevinsdream6.png" width="500">
+
+팀 로고
+
+
+<img src="./images/kevinsdream7.png" width="500">
+
+메인 화면
+
+
+<img src="./images/kevinsdream8.png" width="500">
+
+스테이지 선택
+
+
+<img src="./images/kevinsdream9.png" width="500">
+
+문제 선택
+
+
+<img src="./images/kevinsdream10.png" width="500">
+
+물체인식부
+
+
+<img src="./images/kevinsdream11.png" width="500">
+
+듣고 말하기
+
+
+<img src="./images/kevinsdream12.png" width="500">
+
+손글씨 인식부
+
+
+<img src="./images/kevinsdream13.png" width="500">
+
+엔딩
+
+
+<img src="./images/kevinsdream14.png" width="500">
+
+엔딩 앨범
+
+
