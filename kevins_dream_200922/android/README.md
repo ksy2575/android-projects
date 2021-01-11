@@ -1,4 +1,5 @@
 <img src="./images/kevinsdream1.png" width="300">
+<img src="./images/kevinsdream2.png" width="300">
 
 #### 인공지능을 활용한 아동용 영어교육 어플리케이션 - 케빈의 꿈
 
@@ -26,8 +27,8 @@
       + inflater를 활용한 환경설정 등 개발
       + 캐릭터 디자인 및 bgm, 효과음 제작
    - 이예지(팀원)
-      + DB 구현
-      + 엔딩 구현
+      + SQLite를 활용한 DB 구현
+      + 엔딩 및 크레딧 구현
       + 배경 및 아이콘 디자인
    - 주지영(팀원)
       + 튜토리얼 구현
