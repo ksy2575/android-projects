@@ -118,9 +118,9 @@
 
 손글씨 인식부
 
-
-
-
+ 
+ 
+ 
 
 <img src="./images/kevinsdream13.jpg" width="300"><img src="./images/kevinsdream13_2.jpg" width="300">
 <img src="./images/kevinsdream13_3.jpg" width="300"><img src="./images/kevinsdream13_4.jpg" width="300">
