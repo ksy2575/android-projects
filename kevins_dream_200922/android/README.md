@@ -35,3 +35,15 @@
       + 듣고 말하기 구현
       + 버튼 디자인
       
+
+<img src="./images/kevinsdream2.png" width="300">
+#### 시스템 구성도, 순서도
+
+<img src="./images/kevinsdream3.png" width="300">
+
+<img src="./images/kevinsdream4.png" width="300">
+
+
+#### 개발 일정
+
+<img src="./images/kevinsdream5.png" width="300">
