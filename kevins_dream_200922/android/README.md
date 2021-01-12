@@ -57,14 +57,6 @@
 
 
 
-<img src="./images/kevinsdream6.jpg" width="500">
-
-팀 로고
-
-
-
-
-
 <img src="./images/kevinsdream7.jpg" width="500">
 
 메인 화면
@@ -106,7 +98,7 @@
 
 
 
-<img src="./images/kevinsdream11.jpg" width="300"><img src="./images/kevinsdream11_2.jpg" width="300">
+<img src="./images/kevinsdream11.jpg" width="500">
 
 듣고 말하기
 
@@ -114,7 +106,7 @@
 
 
 
-<img src="./images/kevinsdream12.jpg" width="300"><img src="./images/kevinsdream12_2.jpg" width="300"><img src="./images/kevinsdream12_3.jpg" width="300">
+<img src="./images/kevinsdream12_2.jpg" width="300"><img src="./images/kevinsdream12_3.jpg" width="300">
 
 손글씨 인식부
 
@@ -122,7 +114,6 @@
  
  
 
-<img src="./images/kevinsdream13.jpg" width="300"><img src="./images/kevinsdream13_2.jpg" width="300">
 <img src="./images/kevinsdream13_3.jpg" width="300"><img src="./images/kevinsdream13_4.jpg" width="300">
 
 엔딩
