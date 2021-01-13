@@ -2,6 +2,7 @@ package com.example.nonogram_201222;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -64,6 +65,11 @@ public class StageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public static Intent getNameIntent(Context context, String firstName){
+        Intent intent = new Intent(context, GameActivity.class);
+        intent.putExtra("i", firstName);
+        return intent;
     }
     void goToGame(int i, int j){
         Log.d("asdf", "asdf");

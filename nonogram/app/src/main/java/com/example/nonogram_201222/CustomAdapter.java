@@ -172,10 +172,13 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
                         @Override
                         public void onClick(View view) {
                             Log.d("asdf", "icon1 : " + position +  getItemId(position));
-                            if(true){
-                                StageActivity stageActivity = new StageActivity();
-                                stageActivity.goToGame(1, position);
-                            }
+//                            if(true){
+//                                StageActivity stageActivity = new StageActivity();
+//                                stageActivity.goToGame(1, position);
+//                            }
+                            Intent intent = StageActivity.getNameIntent(CustomAdapter.this, "i");
+
+
                         }
                     });
             viewHolder.icon2.
