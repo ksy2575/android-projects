@@ -120,10 +120,3 @@
 
 
 
-
-
-<img src="./images/kevinsdream14.jpg" width="500">
-
-엔딩 앨범
-
-
