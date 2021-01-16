@@ -221,8 +221,4 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
         return convertView;
     }
 
-//    @Override
-//    protected void onCreate(@Nullable Bundle savedInstanceState){
-//        super.onCreate(savedInstanceState);
-//    }
 }
