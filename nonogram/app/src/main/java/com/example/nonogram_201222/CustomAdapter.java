@@ -22,8 +22,8 @@ import java.util.HashMap;
 
 public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
     private HashMap<Integer, String> items;
-    Context context;
-    ViewHolder viewHolder;
+    private Context context;
+    private ViewHolder viewHolder;
     class ViewHolder{
         TextView title;
         ImageView icon1;
@@ -82,7 +82,6 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
 
         int id;
         int i = 0;
-        Context context;
 
         //st1_1 형식으로 저장된 사진 파일 불러오기 - 나중에 DB와 연동
         context = viewHolder.icon1.getContext();
@@ -176,8 +175,10 @@ public class CustomAdapter  extends ArrayAdapter<HashMap<Integer, String>> {
 //                                StageActivity stageActivity = new StageActivity();
 //                                stageActivity.goToGame(1, position);
 //                            }
-                            Intent intent = StageActivity.getNameIntent(CustomAdapter.this, "i");
+                            Intent intent = new Intent(context, GameActivity.class);
 
+//                            context.startActivity(new Intent(context, GameActivity.class));
+                            context.startActivity(intent);
 
                         }
                     });
