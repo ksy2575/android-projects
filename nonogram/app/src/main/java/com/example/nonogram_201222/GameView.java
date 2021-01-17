@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.Collections;
+
 public class GameView extends View {
 
     private Paint paint = new Paint();
@@ -35,6 +37,11 @@ public class GameView extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         Log.d("asdf", w + ", " + h);
+        int numberLength, squareLength;
+        numberLength = (int)(Math.min(w,h)*0.25);
+        squareLength = (int)(Math.min(w,h)*0.75);
+        canvas
+
     }
 
     @Override
@@ -44,6 +51,7 @@ public class GameView extends View {
 
         //STROKE속성을 이용하여 테두리...선...
         paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.);
 
         //두께
         paint.setStrokeWidth(3);
@@ -51,6 +59,7 @@ public class GameView extends View {
 
         //path객체가 가지고 있는 경로를 화면에 그린다...
         canvas.drawPath(path,paint);
+        canvas.draw
 
     }
 
