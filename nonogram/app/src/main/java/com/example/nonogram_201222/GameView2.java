@@ -10,31 +10,24 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class GameView extends View {
+public class GameView2 extends View {
 
     private Paint paint = new Paint();
     private Path path = new Path();
     private int x,y;
 
-    public GameView(Context context) {
+    public GameView2(Context context) {
         super(context);
     }
-    public GameView(Context context, AttributeSet attrs) {
+    public GameView2(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
-    public GameView(Context context, AttributeSet attrs, int defStyle) {
+    public GameView2(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
-//    @Override
-//    protected void onMeasure(int widthMeasureSpec , int heightMeasureSpec){
-////        Log.d("asdf", widthMeasureSpec + ", " + heightMeasureSpec);
-//    }
-
-
     @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        Log.d("asdf", w + ", " + h);
+    protected void onMeasure(int widthMeasureSpec , int heightMeasureSpec){
+//        Log.d("asdf", widthMeasureSpec + ", " + heightMeasureSpec);
     }
 
     @Override
