@@ -45,13 +45,10 @@
             <com.example.nonogram_201222.GameView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#eeeeeeee"/>
-            <com.example.nonogram_201222.GameView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#eeeeeeee"/>
+                android:background="#55ff0000"/>
 
         </FrameLayout>
+
 
     </LinearLayout>
 
