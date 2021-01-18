@@ -19,9 +19,9 @@ public class GameView extends View {
     private Paint paint = new Paint();
     private Path path = new Path();
     private int x,y;
-    int numberLength, squareLength, pointLength;
+    float numberLength, squareLength, pointLength;
 
-    float[] pts = new float[22];
+    float[] pts = new float[44];
 
     public GameView(Context context) {
         super(context);
@@ -42,9 +42,9 @@ public class GameView extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         Log.d("asdf", w + ", " + h);
-        numberLength = (int)(Math.min(w,h)*0.25);
-        squareLength = (int)(Math.min(w,h)*0.75);
-        pointLength = squareLength/10;
+        numberLength = (float)(Math.min(w,h)*0.33);
+        squareLength = (float)(Math.min(w,h)*0.66);
+        pointLength = squareLength/40;
     }
     @Override
     protected void onDraw(Canvas canvas) {
@@ -58,19 +58,24 @@ public class GameView extends View {
 
         //기본 구조 그리기
 
-        //가로줄
-        for(int i=0;i<22;i+=2){
-            pts[i] = ((float)(pointLength*i));
+        //가로줄 11개 {x, 0, x, 1560}
+        for(int i=0;i<44;i+=4){
+            pts[i] = numberLength+(float)(pointLength*i);
             pts[i+1] = 0;
-            Log.d("asdf", pts[i] + " , " + pts[i+1]);
+            pts[i+2] = numberLength+(float)(pointLength*i);
+            pts[i+3] = numberLength+(float)(squareLength);
+//            Log.d("asdf", pts[i] + " , " + pts[i+1]);
         }
-        //세로줄
-//        for(int i=0;i<10;i++){
-//            pts[i] = ((float)(pointLength*i));
-//        }
+        canvas.drawLines(pts, paint);
 
-
-//        float[] pts={0,0,1080,1046,0,1046,1080,0};
+        //세로줄 11개 {0, y, 1560, y}
+        for(int i=0;i<44;i+=4){
+            pts[i] = 0;
+            pts[i+1] = numberLength+(float)(pointLength*i);
+            pts[i+2] = numberLength+(float)(squareLength);
+            pts[i+3] = numberLength+(float)(pointLength*i);
+//            Log.d("asdf", pts[i] + " , " + pts[i+1]);
+        }
         canvas.drawLines(pts, paint);
 
     }
