@@ -60,6 +60,16 @@ public class GameView extends View {
 
         //가로줄 11개 {x, 0, x, 1560}
         for(int i=0;i<44;i+=4){
+            //21.01.19 외곽선 강조하기 나중에 코딩
+//            if(i == 0 || i == 20 || i == 40){
+//                paint.setStrokeWidth(10);
+//                pts[i] = numberLength+(float)(pointLength*i);
+//                pts[i+1] = 0;
+//                pts[i+2] = numberLength+(float)(pointLength*i);
+//                pts[i+3] = numberLength+(float)(squareLength);
+//                paint.setStrokeWidth(3);
+//                continue;
+//            }
             pts[i] = numberLength+(float)(pointLength*i);
             pts[i+1] = 0;
             pts[i+2] = numberLength+(float)(pointLength*i);
@@ -82,23 +92,29 @@ public class GameView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        x = (int)event.getX();
-        y = (int)event.getY();
-
-//        switch(event.getAction()){
-//            case MotionEvent.ACTION_DOWN:
-//                path.moveTo(x,y);
-//                break;
-//            case MotionEvent.ACTION_MOVE:
-//                x = (int)event.getX();
-//                y = (int)event.getY();
+//        x = (int)event.getX();
+//        y = (int)event.getY();
 //
-//                path.lineTo(x,y);
-//                break;
-//        }
-
-        //View의 onDraw()를 호출하는 메소드...
-        invalidate();
+//
+//
+//
+////        if(x >= numberLength && y >= numberLength){
+////            Log.d("asdf", x + " , " + y);
+////            switch(event.getAction()){
+////                case MotionEvent.ACTION_DOWN:
+////                    path.moveTo(x,y);
+////                    break;
+////                case MotionEvent.ACTION_MOVE:
+////                    x = (int)event.getX();
+////                    y = (int)event.getY();
+////
+////                    path.lineTo(x,y);
+////                    break;
+////            }
+////        }
+//
+//        //View의 onDraw()를 호출하는 메소드...
+//        invalidate();
 
         return true;
     }
