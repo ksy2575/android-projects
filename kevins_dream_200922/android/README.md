@@ -57,62 +57,25 @@
 
 
 
-<img src="./images/kevinsdream7.jpg" width="500">
+<img src="./images/kevinsdream7.jpg" width="500"><img src="./images/kevinsdream7_2.jpg" width="500">
 
-메인 화면
-
-
-
-
-
-
-<img src="./images/kevinsdream7_2.jpg" width="500">
-
-튜토리얼
+메인 화면, 튜토리얼
 
 
 
 
 
-<img src="./images/kevinsdream8.jpg" width="500">
+<img src="./images/kevinsdream8.jpg" width="500"><img src="./images/kevinsdream9.jpg" width="500">
 
-스테이지 선택
+스테이지 선택, 문제 선택
 
+<img src="./images/kevinsdream10.jpg" width="500"><img src="./images/kevinsdream11.jpg" width="500">
 
-
-
-
-<img src="./images/kevinsdream9.jpg" width="500">
-
-문제 선택
-
-
-
-
-
-<img src="./images/kevinsdream10.jpg" width="500">
-
-물체인식부
-
-
-
-
-
-<img src="./images/kevinsdream11.jpg" width="500">
-
-듣고 말하기
-
-
-
-
+물체인식부, 듣고 말하기
 
 <img src="./images/kevinsdream12_2.jpg" width="300"><img src="./images/kevinsdream12_3.jpg" width="300">
 
 손글씨 인식부
-
- 
- 
- 
 
 <img src="./images/kevinsdream13_3.jpg" width="300"><img src="./images/kevinsdream13_4.jpg" width="300">
 
