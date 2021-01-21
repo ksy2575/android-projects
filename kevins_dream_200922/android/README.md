@@ -57,13 +57,9 @@
 
 
 
-<img src="./images/kevinsdream7.jpg" width="500"><img src="./images/kevinsdream7_2.jpg" width="500">
+<img src="./images/kevinsdream7.jpg" width="400"><img src="./images/kevinsdream7_2.jpg" width="400">
 
 메인 화면, 튜토리얼
-
-
-
-
 
 <img src="./images/kevinsdream8.jpg" width="400"><img src="./images/kevinsdream9.jpg" width="400">
 
