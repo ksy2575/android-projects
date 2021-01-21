@@ -1,5 +1,4 @@
-<img src="./images/rythm_noodle_1.jpg" width="300">
-<img src="./images/rythm_noodle_2.jpg" width="300">
+<img src="./images/rythm_noodle_1.jpg" width="300"><img src="./images/rythm_noodle_2.jpg" width="300">
 
 #### 모바일 프로그래밍 최종과제 - 가락국수
 
