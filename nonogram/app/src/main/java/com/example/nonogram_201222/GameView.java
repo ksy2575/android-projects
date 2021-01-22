@@ -44,7 +44,7 @@ public class GameView extends View {
         Log.d("asdf", w + ", " + h);
         numberLength = (float)(Math.min(w,h)*0.33);
         squareLength = (float)(Math.min(w,h)*0.66);
-        pointLength = squareLength/40;
+        pointLength = squareLength/10;
     }
     @Override
     protected void onDraw(Canvas canvas) {
@@ -70,9 +70,9 @@ public class GameView extends View {
 //                paint.setStrokeWidth(3);
 //                continue;
 //            }
-            pts[i] = numberLength+(float)(pointLength*i);
+            pts[i] = numberLength+(float)(pointLength*i/4);
             pts[i+1] = 0;
-            pts[i+2] = numberLength+(float)(pointLength*i);
+            pts[i+2] = numberLength+(float)(pointLength*i/4);
             pts[i+3] = numberLength+(float)(squareLength);
 //            Log.d("asdf", pts[i] + " , " + pts[i+1]);
         }
@@ -81,9 +81,9 @@ public class GameView extends View {
         //세로줄 11개 {0, y, 1560, y}
         for(int i=0;i<44;i+=4){
             pts[i] = 0;
-            pts[i+1] = numberLength+(float)(pointLength*i);
+            pts[i+1] = numberLength+(float)(pointLength*i/4);
             pts[i+2] = numberLength+(float)(squareLength);
-            pts[i+3] = numberLength+(float)(pointLength*i);
+            pts[i+3] = numberLength+(float)(pointLength*i/4);
 //            Log.d("asdf", pts[i] + " , " + pts[i+1]);
         }
         canvas.drawLines(pts, paint);

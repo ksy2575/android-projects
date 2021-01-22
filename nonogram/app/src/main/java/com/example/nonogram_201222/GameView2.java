@@ -10,16 +10,38 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.lang.reflect.Array;
 
 public class GameView2 extends View {
 
     private Paint paint = new Paint();
     private Path path = new Path();
     private int x,y;
+    private int xToGrid,yToGrid, tempX=-1, tempY=-1;
     float numberLength, squareLength, pointLength;
+
+    int[][] table = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
+
+    int[][] house = { {0, 0, 0, 0, 1, 1, 0, 0, 0, 0},
+                    {0, 0, 0, 1, 1, 1, 1, 0, 0, 0},
+                    {0, 0, 1, 1, 1, 1, 1, 1, 0, 0},
+                    {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                    {1, 1, 1, 1, 0, 0, 1, 1, 1, 1},
+                    {1, 1, 1, 1, 0, 0, 1, 1, 1, 1},
+                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},};
+
 
     float[] pts = new float[44];
 
@@ -42,9 +64,9 @@ public class GameView2 extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         Log.d("asdf2", w + ", " + h);
-        numberLength = (float)(Math.min(w,h)*0.33);
-        squareLength = (float)(Math.min(w,h)*0.66);
-        pointLength = squareLength/40;
+        numberLength = (float)(Math.min(w,h)*0.334);
+        squareLength = (float)(Math.min(w,h)*0.666);
+        pointLength = squareLength/10;
     }
     @Override
     protected void onDraw(Canvas canvas) {
@@ -53,58 +75,49 @@ public class GameView2 extends View {
         paint.setStyle(Paint.Style.STROKE);
         //두께
         paint.setStrokeWidth(3);
-        //path객체가 가지고 있는 경로를 화면에 그린다...
-//        canvas.drawPath(path,paint);
-
-        //기본 구조 그리기
-
-        //가로줄 11개 {x, 0, x, 1560}
-//        for(int i=0;i<44;i+=4){
-//            pts[i] = numberLength+(float)(pointLength*i);
-//            pts[i+1] = 0;
-//            pts[i+2] = numberLength+(float)(pointLength*i);
-//            pts[i+3] = numberLength+(float)(squareLength);
-//        }
-//        canvas.drawLines(pts, paint);
-//
-//        //세로줄 11개 {0, y, 1560, y}
-//        for(int i=0;i<44;i+=4){
-//            pts[i] = 0;
-//            pts[i+1] = numberLength+(float)(pointLength*i);
-//            pts[i+2] = numberLength+(float)(squareLength);
-//            pts[i+3] = numberLength+(float)(pointLength*i);
-//        }
         canvas.drawPath(path, paint);
 
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+//        int x = (int)event.getX();
+//        int y = (int)event.getY();
         x = (int)event.getX();
         y = (int)event.getY();
-
-        if(x >= numberLength && y >= numberLength){
-            Log.d("asdf", x + " , " + y);
-            switch(event.getAction()){
-                case MotionEvent.ACTION_DOWN:
-                    path.moveTo(x,y);
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    x = (int)event.getX();
-                    y = (int)event.getY();
-
-                    path.lineTo(x,y);
-                    break;
+        //21.01.19 canvas to array
+        xToGrid = (int)((x-numberLength)/pointLength);
+        yToGrid = (int)((y-numberLength)/pointLength);
+        if(tempX != xToGrid || tempY != yToGrid){
+            tempX = xToGrid;
+            tempY = yToGrid;
+            if(xToGrid >= 0 && xToGrid <= 9 && yToGrid >= 0 && yToGrid <= 9){
+                Log.d("asdf", xToGrid + " , " + yToGrid);
+                toArray(xToGrid, yToGrid);
+                switch(event.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        path.moveTo(x,y);
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        x = (int)event.getX();
+                        y = (int)event.getY();
+                        path.lineTo(x,y);
+                        break;
+                }
             }
-
-            //21.01.19 canvas to array
-
-
         }
-
         //View의 onDraw()를 호출하는 메소드...
         invalidate();
 
         return true;
+    }
+
+    //21.01.22 터치 좌표를 배열에 업데이트하는 메소드
+    private int[][] toArray(int xToGrid, int yToGrid) {
+        return house;
+    }
+    //21.01.22 주어진 배열을 분석해 로직을 반환하는 메소드
+    private int[][] arrayToLogic(int[][] array){
+        return house;
     }
 }
