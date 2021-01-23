@@ -12,6 +12,8 @@ public class GameActivity extends AppCompatActivity {
 
     ImageButton hintBtn, writeBtn, checkBtn;
     FrameLayout gameArea;
+    GameView GameView;
+    GameView2 GameView2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +26,15 @@ public class GameActivity extends AppCompatActivity {
         hintBtn = findViewById(R.id.hintBtn);
         writeBtn = findViewById(R.id.writeBtn);
         checkBtn = findViewById(R.id.checkBtn);
+        GameView = findViewById(R.id.GameView);
+        GameView2 = findViewById(R.id.GameView2);
 
         hintBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "hintBtn", Toast.LENGTH_LONG).show();
+                GameView2.userTable = new int[10][10];
+                GameView2.invalidate();
             }
         });
         writeBtn.setOnClickListener(new View.OnClickListener() {

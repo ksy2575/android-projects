@@ -7,10 +7,12 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class GameView2 extends View {
 
@@ -44,6 +46,7 @@ public class GameView2 extends View {
 
 
     float[] pts = new float[44];
+    private boolean touchFlag;
 
     public GameView2(Context context) {
         super(context);
@@ -72,17 +75,32 @@ public class GameView2 extends View {
         paint.setStrokeWidth(3);
 //        canvas.drawPath(path, paint);
         if(x != 0 && y != 0){
-            float gridToPx = xToGrid*pointLength+numberLength, gridToPy = yToGrid*pointLength+numberLength;
-            canvas.drawRect(gridToPx, gridToPy, gridToPx+pointLength, gridToPy+pointLength, paint);
+            for(int i = 0;i<10;i++){
+                for(int j = 0;j<10;j++){
+                    if(userTable[i][j] == 1){
+                        float gridToPx = j*pointLength+numberLength, gridToPy = i*pointLength+numberLength;
+                        canvas.drawRect(gridToPx, gridToPy, gridToPx+pointLength, gridToPy+pointLength, paint);
+                    }
+                }
+            }
+            compareTable(userTable, house);
+
         }
 
 
+    }
+
+    private void compareTable(int[][] userTable, int[][] house) {
+        if(userTable == house){
+            Log.d("asdf", "어예에");
+        }
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 //        int x = (int)event.getX();
 //        int y = (int)event.getY();
+        touchFlag = true;
         x = event.getX();
         y = event.getY();
         //21.01.19 canvas to array
@@ -93,19 +111,23 @@ public class GameView2 extends View {
             tempY = yToGrid;
             if(xToGrid >= 0 && xToGrid <= 9 && yToGrid >= 0 && yToGrid <= 9){
 //                Log.d("asdf", xToGrid + " , " + yToGrid);
-
+                int currValue = toArray(xToGrid, yToGrid);//반환값 필요 없을듯
                 //21.01.23 case 0 > 빈칸, 1 > 색칠, 2 > 엑스
-                switch (toArray(xToGrid, yToGrid)){
+                switch (currValue){
                     case 0:
                         break;
                     case 1:
-                        path.moveTo(xToGrid,yToGrid);
                         break;
                     case 2:
                         break;
                 }
-                //View의 onDraw()를 호출하는 메소드...
+
+                //View의 onDraw()를 호출하는 메소드
                 invalidate();
+//                if(event.getAction() == MotionEvent.ACTION_UP){
+//                    Log.d("asdf","up");
+//                    touchFlag = false;
+//                }
 //                switch(event.getAction()){
 //                    case MotionEvent.ACTION_DOWN:
 //                        path.moveTo(x,y);
@@ -118,16 +140,25 @@ public class GameView2 extends View {
 //                }
             }
         }
-
-
         return true;
     }
 
-    //21.01.22 터치 좌표를 배열에 업데이트하는 메소드
+    //21.01.23 이거는 키보드용이고 터치를 떼었을 때 플래그를 작동시킬 방법 찾기
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        return super.onKeyUp(keyCode, event);
+    }
+
+    //21.01.23 터치 좌표를 배열에 업데이트하는 메소드(※ 배열의 i,j가 아닌 좌표의 x,y축을 기준으로 삼음 - 가로 : x, 세로 : y)
     private int toArray(int xToGrid, int yToGrid) {
         //0이면 1, 1이면 0
-        userTable[xToGrid][yToGrid] = (userTable[xToGrid][yToGrid] + 1)%3;
-        return userTable[xToGrid][yToGrid];
+        userTable[yToGrid][xToGrid] = (userTable[yToGrid][xToGrid] + 1)%2;
+        Log.d("asdf", xToGrid +","+ yToGrid);
+        for(int i=0; i<10;i++){
+//            Log.d("asdf", Arrays.toString(userTable[i]));
+        }
+
+        return userTable[yToGrid][xToGrid];
     }
     //21.01.22 주어진 배열을 분석해 로직을 반환하는 메소드(게임 초기 구성 시 필요)
     private int[][] arrayToLogic(int[][] array){
