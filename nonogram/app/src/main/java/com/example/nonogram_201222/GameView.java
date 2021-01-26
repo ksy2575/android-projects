@@ -10,7 +10,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,6 +24,23 @@ public class GameView extends View {
     float numberLength, squareLength, pointLength;
 
     float[] pts = new float[44];
+
+    int[][] house = { {0, 0, 0, 0, 1, 1, 0, 0, 0, 0},
+            {0, 0, 0, 1, 1, 1, 1, 0, 0, 0},
+            {0, 0, 1, 1, 1, 1, 1, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 0, 0, 1, 1, 1, 1},
+            {1, 1, 1, 1, 0, 0, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},};
+
+    int[] numArray = new int[20];
+    ArrayList<Integer[]> list2 = new ArrayList<Integer[]>();
+
+
+
 
     public GameView(Context context) {
         super(context);
@@ -50,7 +69,7 @@ public class GameView extends View {
     protected void onDraw(Canvas canvas) {
         paint.setColor(Color.BLACK);
         //STROKE속성을 이용하여 테두리...선...
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL);
         //두께
         paint.setStrokeWidth(3);
         //path객체가 가지고 있는 경로를 화면에 그린다...
@@ -87,6 +106,13 @@ public class GameView extends View {
 //            Log.d("asdf", pts[i] + " , " + pts[i+1]);
         }
         canvas.drawLines(pts, paint);
+        paint.setTextSize((float)100);
+        canvas.drawText("1", (float)numberLength, (float)numberLength, paint);
+        arrayToNum(house);
+        Log.d("asdf", Arrays.toString(numArray));
+        for(Integer[] i:list2){
+            Log.d("asdf", Arrays.toString(i));
+        }
 
     }
 
@@ -117,5 +143,39 @@ public class GameView extends View {
 //        invalidate();
 
         return true;
+    }
+
+    //int[][] house = { {0, 0, 0, 0, 1, 1, 0, 0, 0, 0},
+    //                    {0, 0, 0, 1, 1, 1, 1, 0, 0, 0},
+    //                    {0, 0, 1, 1, 1, 1, 1, 1, 0, 0},
+    //                    {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+    //                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    //                    {1, 1, 1, 1, 0, 0, 1, 1, 1, 1},
+    //                    {1, 1, 1, 1, 0, 0, 1, 1, 1, 1},
+    //                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    //                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    //                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},};
+    //21.01.26 numArray[0] = 가로, numArray[1] = 세로
+    private int[][] arrayToNum(int[][] table){
+
+        //가로
+        for(int i=0;i<table.length;i++){
+            int cnt = 0;
+            ArrayList<Integer> list = new ArrayList<Integer>();
+            for(int j=0;j<table[0].length;j++){
+                if(table[i][j]==1){
+                    cnt++;
+                }
+                else if(cnt != 0){
+                    list.add(cnt);
+                    cnt = 0;
+                }
+            }
+            if(list.size() == 0){
+                list.add(cnt);
+            }
+//            list2.add(list);
+        }
+        return house;
     }
 }
