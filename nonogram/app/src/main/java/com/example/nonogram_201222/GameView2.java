@@ -47,7 +47,7 @@ public class GameView2 extends View {
 
     float[] pts = new float[44];
     private boolean touchFlag;
-    private Object dragFunc;
+    int[] dragArray = {-1, -1, -1, -1};
 
     public GameView2(Context context) {
         super(context);
@@ -62,7 +62,7 @@ public class GameView2 extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        Log.d("asdf2", w + ", " + h);
+//        Log.d("asdf2", w + ", " + h);
         numberLength = (float)(Math.min(w,h)*0.33);
         squareLength = (float)(Math.min(w,h)*0.66);
         pointLength = squareLength/10;
@@ -85,7 +85,24 @@ public class GameView2 extends View {
                 }
             }
             compareTable(userTable, house);
-
+        }
+        if((0<=dragArray[2] && dragArray[2]<10) && (0<=dragArray[3] && dragArray[3]<10)){
+            //tempX, tempY, GridX, GridY
+            Log.d("asdf2", dragArray[0] + ", " + dragArray[1] + ", " + dragArray[2] + ", " + dragArray[3]);
+            if(dragArray[0] == dragArray[2]){
+                for(int i = Math.min(dragArray[1], dragArray[3]); i <= Math.max(dragArray[1], dragArray[3]); i++){
+                    float gridToPx = dragArray[0]*pointLength+numberLength, gridToPy = i*pointLength+numberLength;
+                    canvas.drawRect(gridToPx, gridToPy, gridToPx+pointLength, gridToPy+pointLength, paint);
+                    Log.d("asdf2", ", ");
+                }
+            }
+            else{
+                for(int i = Math.min(dragArray[0], dragArray[2]); i <= Math.max(dragArray[0], dragArray[2]); i++){
+                    float gridToPx = i*pointLength+numberLength, gridToPy = dragArray[0]*pointLength+numberLength;
+                    canvas.drawRect(gridToPx, gridToPy, gridToPx+pointLength, gridToPy+pointLength, paint);
+                    Log.d("asdf2", ",sdfsdf ");
+                }
+            }
         }
 
 
@@ -99,13 +116,13 @@ public class GameView2 extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d("asdf", ""+event.getAction());
+//        Log.d("asdf", ""+event.getAction());
         x = event.getX();
         y = event.getY();
         //21.01.19 canvas to array
         xToGrid = (int)Math.floor((x-numberLength)/pointLength);
         yToGrid = (int)Math.floor((y-numberLength)/pointLength);
-        Log.d("asdf", ""+tempX+ ""+tempY + ""+touchFlag);
+//        Log.d("asdf", ""+tempX+ ""+tempY + ""+touchFlag);
 
         //터치
         if(event.getAction() == MotionEvent.ACTION_DOWN){
@@ -137,7 +154,7 @@ public class GameView2 extends View {
 //                dragFunc(tempX, tempY, xToGrid, yToGrid);
 //            }
             dragFunc(tempX, tempY, xToGrid, yToGrid);
-
+            invalidate();
         }
         //떼기
         else{
@@ -194,19 +211,18 @@ public class GameView2 extends View {
 
     private void dragFunc(int tX, int tY, int xG, int yG) {
         int dTempX, dTempY;
-        if(Math.abs(tX-xG) > Math.abs(tY-yG)){
+//        Log.d("asdf", (Math.abs(tX-xG) > Math.abs(tY-yG)) + "");
+        if(true){//Math.abs(tX-xG) > Math.abs(tY-yG)
             //x축 상의 친구들을 tempX,tempY의 색으로 변경
-
+            dragArray[0] = tX;
+            dragArray[1] = tY;
+            dragArray[2] = xG;
+            dragArray[3] = yG;
         }
         else{
             //y축 상의 친구들을 tempX,tempY의 색으로 변경
-        }
-    }
 
-    //21.01.23 이거는 키보드용이고 터치를 떼었을 때 플래그를 작동시킬 방법 찾기
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        return super.onKeyUp(keyCode, event);
+        }
     }
 
     //21.01.23 터치 좌표를 배열에 업데이트하는 메소드(※ 배열의 i,j가 아닌 좌표의 x,y축을 기준으로 삼음 - 가로 : x, 세로 : y)
@@ -214,7 +230,7 @@ public class GameView2 extends View {
         //0이면 1, 1이면 0, defaultValue == -1이면 드래그처리
         if(defaultValue == -1){
             userTable[yToGrid][xToGrid] = (userTable[yToGrid][xToGrid] + 1)%2;
-            Log.d("asdf", xToGrid +","+ yToGrid);
+//            Log.d("asdf", xToGrid +","+ yToGrid);
 //            for(int i=0; i<10;i++){
 //            Log.d("asdf", Arrays.toString(userTable[i]));
 //            }
