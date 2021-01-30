@@ -35,14 +35,12 @@
 
 #### 시스템 구성도, 순서도
 
-<img src="./images/kevinsdream3.png" width="400"><img src="./images/kevinsdream4.png" width="400">
 
 
 
 
 #### 개발 일정(2019.12.19 ~ 2020.09.22)
 
-<img src="./images/kevinsdream5.png" width="500">
 
 
 
@@ -52,73 +50,7 @@
 
 
 
-<img src="./images/kevinsdream7.jpg" width="500">
-
-메인 화면
+<img src="./images/rythm_noodle_3.jpg" width="300"><img src="./images/rythm_noodle_4.jpg" width="300">
 
 
-
-
-
-
-<img src="./images/kevinsdream7_2.jpg" width="500">
-
-튜토리얼
-
-
-
-
-
-<img src="./images/kevinsdream8.jpg" width="500">
-
-스테이지 선택
-
-
-
-
-
-<img src="./images/kevinsdream9.jpg" width="500">
-
-문제 선택
-
-
-
-
-
-<img src="./images/kevinsdream10.jpg" width="500">
-
-물체인식부
-
-
-
-
-
-<img src="./images/kevinsdream11.jpg" width="500">
-
-듣고 말하기
-
-
-
-
-
-<img src="./images/kevinsdream12_2.jpg" width="300"><img src="./images/kevinsdream12_3.jpg" width="300">
-
-손글씨 인식부
-
- 
- 
- 
-
-<img src="./images/kevinsdream13_3.jpg" width="300"><img src="./images/kevinsdream13_4.jpg" width="300">
-
-엔딩
-
-
-
-
-
-<img src="./images/kevinsdream14.jpg" width="500">
-
-엔딩 앨범
-
-
+<img src="./images/rythm_noodle_5.jpg" width="300"><img src="./images/rythm_noodle_6.jpg" width="300">
