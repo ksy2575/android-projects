@@ -48,7 +48,7 @@
 #### 앱 스크린샷
 
 
-
+<img src="./images/rythm_noodle_1.jpg" width="300"><img src="./images/rythm_noodle_2.jpg" width="300">
 
 <img src="./images/rythm_noodle_3.jpg" width="300"><img src="./images/rythm_noodle_4.jpg" width="300">
 
