@@ -167,17 +167,7 @@ public class GameView2 extends View {
                 tempY = yToGrid;
                 if(xToGrid >= 0 && xToGrid <= 9 && yToGrid >= 0 && yToGrid <= 9){
 //                Log.d("asdf", xToGrid + " , " + yToGrid);
-                    int currValue = toArray(xToGrid, yToGrid,-1);//반환값 필요 없을듯
-                    //21.01.23 case 0 > 빈칸, 1 > 색칠, 2 > 엑스
-//                    switch (currValue){
-//                        case 0:
-//                            break;
-//                        case 1:
-//                            break;
-//                        case 2:
-//                            break;
-//                    }
-                    //View의 onDraw()를 호출하는 메소드
+                    toArray(xToGrid, yToGrid,-1);//반환값 필요 없을듯
                 }
             }
             touchFlag = true;
@@ -189,11 +179,13 @@ public class GameView2 extends View {
         //떼기
         else{
             //21.02.01 드래그 좌표 저장 메서드 추가 필요
-            dragSave();
-            dragArray[0] = -1;
-            dragArray[1] = -1;
-            dragArray[2] = -1;
-            dragArray[3] = -1;
+            if(dragArray[0] != -1){
+                dragSave();
+                dragArray[0] = -1;
+                dragArray[1] = -1;
+                dragArray[2] = -1;
+                dragArray[3] = -1;
+            }
             touchFlag = false;
         }
 //        if(event.getAction() == MotionEvent.ACTION_DOWN && !touchFlag){
@@ -271,7 +263,7 @@ public class GameView2 extends View {
         dragLimit();
         int dragFlag = whereTowhere();
 //        Log.d("asdf2", tempX +", " + tempY +" : "+ userTable[tempX][tempY]);
-        int defaultVal = userTable[tempX][tempY];
+        int defaultVal = userTable[dragArray[0]][dragArray[1]];
         if(dragFlag == 1){
             for(int i = Math.min(dragArray[0], dragArray[2]); i <= Math.max(dragArray[0], dragArray[2]); i++){
                 toArray(i, dragArray[1], defaultVal);
@@ -287,17 +279,19 @@ public class GameView2 extends View {
 
     //21.01.23 터치 좌표를 배열에 업데이트하는 메소드(※ 배열의 i,j가 아닌 좌표의 x,y축을 기준으로 삼음 - 가로 : x, 세로 : y)
     private int toArray(int xToGrid, int yToGrid, int defaultValue) {
-        //0이면 1, 1이면 0, defaultValue == -1이면 드래그처리
+        //0이면 1, 1이면 0, defaultValue != -1이면 드래그처리
         if(defaultValue == -1){
             userTable[yToGrid][xToGrid] = (userTable[yToGrid][xToGrid] + 1)%2;
-            Log.d("asdf", xToGrid +","+ yToGrid);
             for(int i=0; i<10;i++){
-            Log.d("asdf", Arrays.toString(userTable[i]));
+                Log.d("asdf", Arrays.toString(userTable[i]) + " : " + i + "defval = -1");
             }
             return userTable[yToGrid][xToGrid];
         }
         else{
             userTable[yToGrid][xToGrid] = defaultValue;
+            for(int i=0; i<10;i++){
+                Log.d("asdf", Arrays.toString(userTable[i]) + " : " + i + " : " + defaultValue);
+            }
             return userTable[yToGrid][xToGrid];
         }
     }
