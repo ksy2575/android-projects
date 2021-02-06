@@ -1,4 +1,4 @@
-<img src="./images/rythm_noodle_1.jpg" width="300"><img src="./images/rythm_noodle_2.jpg" width="300">
+<img src="./images/rythm_noodle_1.jpg" width="200">
 
 #### 모바일 프로그래밍 최종과제 - 가락국수
 
@@ -24,12 +24,15 @@
 #### 역할 분담
    - 손우영(팀장)
       + 파일 입출력
+      + 
       + 완성된 가락(곡)을 저장 및 수정하는 기능 구현
    - 김수용(팀원)
       + 레이아웃 구현
+      + NoodleLibraryActivity 구현
       + 음악 제작
    - 김관혁(팀원)
       + SoundPool을 활용한 작곡 기능 구현
+      + ChefSelectActivity 구현
       + 요리사(장르) 선택 화면 제작
       
 
