@@ -1,5 +1,5 @@
-<img src="./images/kevinsdream1.png" width="300">
-<img src="./images/kevinsdream2.png" width="300">
+<img src="./images/5seconds_1.jpg" width="300">
+<img src="./images/5seconds_2.jpg" width="300">
 
 #### 5초 준다!
 
@@ -55,25 +55,9 @@
 
 
 
-<img src="./images/kevinsdream7.jpg" width="400"><img src="./images/kevinsdream7_2.jpg" width="400">
+<img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
 
 메인 화면, 튜토리얼
-
-<img src="./images/kevinsdream8.jpg" width="400"><img src="./images/kevinsdream9.jpg" width="400">
-
-스테이지 선택, 문제 선택
-
-<img src="./images/kevinsdream10.jpg" width="400"><img src="./images/kevinsdream11.jpg" width="400">
-
-물체인식부, 듣고 말하기
-
-<img src="./images/kevinsdream12_2.jpg" width="400"><img src="./images/kevinsdream12_3.jpg" width="400">
-
-손글씨 인식부
-
-<img src="./images/kevinsdream13_3.jpg" width="400"><img src="./images/kevinsdream13_4.jpg" width="400">
-
-엔딩
 
 
 
