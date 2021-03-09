@@ -1,5 +1,4 @@
-<img src="./images/5seconds_1.jpg" width="300">
-<img src="./images/5seconds_2.jpg" width="300">
+<img src="./images/5seconds_0.jpg" width="300">
 
 #### 5초 준다!
 
@@ -41,9 +40,9 @@
 
 
 
-<img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
+<img src="./images/5seconds_0.jpg" width="400"><img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
 
-제시어 , 게임 화면
+메인 화면, 제시어 , 게임 화면
 
 
 
