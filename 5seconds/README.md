@@ -43,7 +43,7 @@
 
 <img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
 
-메인 화면, 튜토리얼
+제시어 , 게임 화면
 
 
 
