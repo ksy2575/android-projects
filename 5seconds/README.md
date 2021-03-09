@@ -1,5 +1,5 @@
-<img src="./images/kevinsdream1.png" width="300">
-<img src="./images/kevinsdream2.png" width="300">
+<img src="./images/5seconds_1.jpg" width="300">
+<img src="./images/5seconds_2.jpg" width="300">
 
 #### 5초 준다!
 
@@ -20,7 +20,7 @@
 #### 기대효과(다른 앱과의 차별성)
    1. 스마트폰 하나만으로 보드게임을 즐길 수 있음
    2. 친구들과의 모임 등의 자리에서 약 1~2 시간의 놀이가 가능
-   3. 원작 보드게임과 달리 애플리케이션 내 파일 수정을 통한 확장이 용이
+   3. 원작 보드게임과 달리 애플리케이션 내 파일 수정을 통한 제시어 확장이 용이
 
 #### 역할 분담
    - 김수용(팀장)
@@ -36,44 +36,14 @@
       + 버튼 디자인
       
 
-#### 시스템 구성도, 순서도
-
-<img src="./images/kevinsdream3.png" width="400"><img src="./images/kevinsdream4.png" width="400">
-
-
-
-
-#### 개발 일정(2019.12.19 ~ 2020.09.22)
-
-<img src="./images/kevinsdream5.png" width="500">
-
-
-
-
 #### 앱 스크린샷
 
 
 
 
-<img src="./images/kevinsdream7.jpg" width="400"><img src="./images/kevinsdream7_2.jpg" width="400">
+<img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
 
-메인 화면, 튜토리얼
-
-<img src="./images/kevinsdream8.jpg" width="400"><img src="./images/kevinsdream9.jpg" width="400">
-
-스테이지 선택, 문제 선택
-
-<img src="./images/kevinsdream10.jpg" width="400"><img src="./images/kevinsdream11.jpg" width="400">
-
-물체인식부, 듣고 말하기
-
-<img src="./images/kevinsdream12_2.jpg" width="400"><img src="./images/kevinsdream12_3.jpg" width="400">
-
-손글씨 인식부
-
-<img src="./images/kevinsdream13_3.jpg" width="400"><img src="./images/kevinsdream13_4.jpg" width="400">
-
-엔딩
+제시어 , 게임 화면
 
 
 
