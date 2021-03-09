@@ -36,20 +36,6 @@
       + 버튼 디자인
       
 
-#### 시스템 구성도, 순서도
-
-<img src="./images/kevinsdream3.png" width="400"><img src="./images/kevinsdream4.png" width="400">
-
-
-
-
-#### 개발 일정(2019.12.19 ~ 2020.09.22)
-
-<img src="./images/kevinsdream5.png" width="500">
-
-
-
-
 #### 앱 스크린샷
 
 
