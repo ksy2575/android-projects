@@ -1,4 +1,4 @@
-<img src="./images/5seconds_0.jpg" width="300">
+<img src="./images/5seconds_mainimage.png" width="300">
 
 #### 5초 준다!
 
