@@ -101,3 +101,4 @@
 
 ### DB 구조
    <img src="./images/nonogram_DB.png" width="600">
+    #### ※ 최초 접속 여부 등은 sharedPreference로 구현하도록 수정 
