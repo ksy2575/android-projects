@@ -1,12 +1,10 @@
-<img src="./images/5seconds_mainimage.png" width="300">
-
-#### 5초 준다!
+## 5초 준다!
 
 
 
    + 개발일정 : 2020.02.15 ~ 2020.02.18
    + 개발인원 : 김수용
-   + 개발의도 : 동명의 보드게임 '5초 준다!'를 애플리케이션으로 제작하였습니다.</br>       (관련 영상 : https://www.youtube.com/watch?v=ijXDHcSgn2g)  </br>       짧은 기간 내에 직접 사용할 애플리케이션을 만드는 것이 목표였습니다.
+   + 개발의도 : 동명의 보드게임 '5초 준다!'를 애플리케이션으로 제작하였습니다.</br>    짧은 기간 내에 직접 사용할 애플리케이션을 만드는 것이 목표였습니다.
              
              
 #### 사용시나리오
@@ -34,7 +32,7 @@
 
 
 
-<img src="./images/5seconds_0.jpg" width="400"><img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
+<img src="./images/5seconds_1.jpg" width="400"><img src="./images/5seconds_2.jpg" width="400">
 
 메인 화면, 제시어 , 게임 화면
 
